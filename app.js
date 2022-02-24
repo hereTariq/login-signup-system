@@ -24,15 +24,15 @@ app.use(session({
     store: store
 }))
 
-
+const PORT = process.env.PORT || 4300;
 app.use(authRoutes);
 
 
 mongoose.connect(process.env.MONGO_URI)
 .then(result => {
     console.log('mongodb connected');
-    app.listen(process.env.PORT, () => console.log(`server runnin on port`,process.env.PORT));
+    app.listen(PORT, () => console.log(`server runnin on port`,PORT));
 }).catch(err => {
-    throw new Error('Cannot access database right now')
+    throw err;
 });
 
