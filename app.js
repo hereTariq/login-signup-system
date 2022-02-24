@@ -12,10 +12,10 @@ app.use(express.static(join(__dirname,'public')));
 app.use(express.urlencoded({extended: false}));
 
 
-const store = {
+const store = new mongodbSession({
     uri: process.env.MONGO_URI,
     collection: 'session',
-}
+})
 
 app.use(session({
     secret: 'hugl4ut432#$#$@jhjdsfhdsf',
