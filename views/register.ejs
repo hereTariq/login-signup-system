@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <main class="center">
+        <form action="/register" method="post" class="flex-col">
+            <div class="flex-col">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%= oldInput.name %>">
+            </div>
+            <div class="flex-col">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<%= oldInput.email %>">
+            </div>
+            <div class="flex-col">
+                <label for="password1">Password</label>
+                <input type="password" name="password" id="password1" value="<%= oldInput.password %>">
+            </div>
+            <div class="flex-col">
+                <label for="password2">Confirm Password</label>
+                <input type="password" name="password2" id="password2" value="<%= oldInput.password2 %>">
+            </div>
+            <button class="btn" type="submit">Register</button>
+        </form>
+        <div style="margin-top: 10px;">
+            <label for="reg" style="color: gray; font-size: 13px;">Already have an account?</label>
+            <a href="/login">Login</a>
+        </div>
+    </main>
+</body>
+</html>

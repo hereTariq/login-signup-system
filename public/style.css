@@ -1,0 +1,37 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+
+.center a{
+    text-decoration: none;
+    margin: 10px;   
+}
+.home-anchor{
+    text-decoration: none;
+    margin: 10px;
+    background-color: rgb(86, 105, 105);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.logout-btn{
+    padding: 10px 20px;
+    cursor: pointer;
+}
